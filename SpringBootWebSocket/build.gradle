@@ -28,5 +28,10 @@ targetCompatibility = 1.8
 //添加编译时的依赖
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-websocket
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-websocket', version: '2.0.0.RELEASE'
+
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

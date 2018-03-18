@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wzj.demo.mapper.TeacherMapper">
+    <resultMap id="BaseResultMap" type="com.wzj.demo.entity.TeacherBean">
+        <result column="tec_id" property="tec_id" jdbcType="VARCHAR"/>
+        <result column="tec_name" property="tec_name" jdbcType="VARCHAR"/>
+        <result column="tec_age" property="tec_age" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        tec_id, tec_name, tec_age
+    </sql>
+
+    <select id="getTeacherById" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from teacher
+        where tec_id = #{id}
+    </select>
+</mapper>

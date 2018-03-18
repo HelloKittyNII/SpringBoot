@@ -7,6 +7,7 @@ import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -34,6 +35,7 @@ public class MyWebSocket
 
     /**
      * 建立连接
+     *
      * @param session
      */
     @OnOpen
@@ -41,6 +43,8 @@ public class MyWebSocket
     {
         onlineNumber++;
         webSockets.add(this);
+
+        this.session = session;
 
         System.out.println("有新连接加入！ 当前在线人数" + onlineNumber);
     }
@@ -58,13 +62,32 @@ public class MyWebSocket
 
     /**
      * 收到客户端的消息
+     *
      * @param message 消息
      * @param session 会话
      */
     @OnMessage
-    public void onMessage(String message,Session session)
+    public void onMessage(String message, Session session)
     {
         System.out.println("来自客户端消息：" + message);
+
+        sendMessage("欢迎连接");
     }
 
+    /**
+     * 发送消息
+     *
+     * @param message 消息
+     */
+    public void sendMessage(String message)
+    {
+        try
+        {
+            session.getBasicRemote().sendText(message);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 }

@@ -33,4 +33,16 @@ public class WelcomeController
 
         return view;
     }
+
+    @RequestMapping(value = "/testJsp")
+    public ModelAndView testJsp(ModelAndView view)
+    {
+        //设置jsp名字
+        view.setViewName("test_jsp");
+
+        //传递数据
+        view.addObject("name","张三");
+
+        return view;
+    }
 }

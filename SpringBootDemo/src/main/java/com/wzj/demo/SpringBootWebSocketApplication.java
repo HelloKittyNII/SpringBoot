@@ -15,7 +15,6 @@ public class SpringBootWebSocketApplication  extends SpringBootServletInitialize
 	}
 
 
-
 	/**
 	 * Configure the application. Normally all you would need to do it add sources (e.g.
 	 * config classes) because other settings have sensible defaults. You might choose

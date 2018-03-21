@@ -5,58 +5,58 @@ package com.wzj.demo.entity;
  */
 public class TeacherBean
 {
-    private String tec_id;
+    private String tecId;
 
-    private String tec_name;
+    private String tecName;
 
-    private int tec_age;
+    private int tecAge;
 
-    private String tec_desc;
+    private String tecDesc;
 
 
-    public String getTec_id()
+    public String getTecId()
     {
-        return tec_id;
+        return tecId;
     }
 
-    public void setTec_id(String tec_id)
+    public void setTecId(String tecId)
     {
-        this.tec_id = tec_id;
+        this.tecId = tecId;
     }
 
-    public String getTec_name()
+    public String getTecName()
     {
-        return tec_name;
+        return tecName;
     }
 
-    public void setTec_name(String tec_name)
+    public void setTecName(String tecName)
     {
-        this.tec_name = tec_name;
+        this.tecName = tecName;
     }
 
-    public int getTec_age()
+    public int getTecAge()
     {
-        return tec_age;
+        return tecAge;
     }
 
-    public void setTec_age(int tec_age)
+    public void setTecAge(int tecAge)
     {
-        this.tec_age = tec_age;
+        this.tecAge = tecAge;
     }
 
-    public String getTec_desc()
+    public String getTecDesc()
     {
-        return tec_desc;
+        return tecDesc;
     }
 
-    public void setTec_desc(String tec_desc)
+    public void setTecDesc(String tecDesc)
     {
-        this.tec_desc = tec_desc;
+        this.tecDesc = tecDesc;
     }
 
     @Override
     public String toString()
     {
-        return "TeacherBean{" + "tec_id='" + tec_id + '\'' + ", tec_name='" + tec_name + '\'' + ", tec_age=" + tec_age + ", tec_desc='" + tec_desc + '\'' + '}';
+        return "TeacherBean{" + "tecId='" + tecId + '\'' + ", tecName='" + tecName + '\'' + ", tecAge=" + tecAge + ", tecDesc='" + tecDesc + '\'' + '}';
     }
 }

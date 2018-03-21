@@ -37,9 +37,6 @@ dependencies {
 
     runtime ("org.apache.tomcat.embed:tomcat-embed-jasper")
 
-    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
-    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
-
     // https://mvnrepository.com/artifact/com.github.jsqlparser/jsqlparser
     compile group: 'com.github.jsqlparser', name: 'jsqlparser', version: '1.0'
 

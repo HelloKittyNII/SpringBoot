@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wzj.demo.mapper.TeacherMapper">
     <resultMap id="BaseResultMap" type="com.wzj.demo.entity.TeacherBean">
-        <result column="tec_id" property="tec_id" jdbcType="VARCHAR"/>
-        <result column="tec_name" property="tec_name" jdbcType="VARCHAR"/>
-        <result column="tec_age" property="tec_age" jdbcType="INTEGER"/>
+        <result column="tec_id" property="tecId" jdbcType="VARCHAR"/>
+        <result column="tec_name" property="tecName" jdbcType="VARCHAR"/>
+        <result column="tec_age" property="tecAge" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">

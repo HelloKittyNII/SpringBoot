@@ -38,4 +38,14 @@ public class IndexController
 
         return modelAndView;
     }
+
+    /**
+     * 测试welcome
+     * @return 字符串
+     */
+    @RequestMapping("/welcome")
+    public String welcome()
+    {
+        return "Welcome";
+    }
 }

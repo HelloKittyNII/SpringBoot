@@ -7,5 +7,6 @@ import com.nii.cloud.bean.TeacherBean;
  */
 public interface TeacherService
 {
-    public TeacherBean queryTeacher(String id);
+    TeacherBean queryTeacher(String id);
+
 }
